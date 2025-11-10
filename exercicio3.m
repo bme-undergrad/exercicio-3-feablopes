@@ -5,11 +5,21 @@ function [mu] = exercicio3(t, NC)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% digite seu codigo aqui
+t_2h  = t(1:3);
+NC_2h = NC(1:3);
+
+y = log(NC_2h);
+x = t_2h;
+
+p = polyfit(x,y,1);
+
+calculo_mu = p(1);
 
 
-% mantenha essas duas linhas finais, subtituindo mu pelo valor que você calculou
-mu = 0;
+mu = calculo_mu;
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
